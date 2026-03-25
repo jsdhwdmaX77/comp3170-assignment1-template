@@ -21,20 +21,20 @@ Complete the table below indicating the features you have attempted. This will b
 |-------|---------|-------------|
 |<b>Code</b>|
 |Mountain – Mesh|4%|-|
-|Loonar - Colouring|4%|-|
-|Loonar Surface|4%|-|
-|Loonar Surface - Distribution|4%|-|
+|Mountain - Colouring|4%|-|
+|Surface Terrain|4%|-|
 |Starfield|4%|-|
-|Lander – Mesh|8%|-|
+|Lander – Mesh|6%|-|
 |Lander – Vertex colouring|4%|-|
-|Lander – Animation|4%|-|
 |Lander – Movement|4%|-|
+|Lander – Dynamic Movement|4%|-|
+|Exhaust – Animation|4%|-|
 |World camera |8%|-|
-|World camera – resizing|8%|-|
-|Boundary control|4%|-|
-|Instancing|8%|-|
+|World camera – resizing|6%|-|
+|Local camera |8%|-|
 |Parallax scrolling|8%|-|
-|Lander - Gravity|4%|-|
+|Instancing|8%|-|
+|Boundary control|4%|-|
 |<b>Documentation</b>|
 |Scene Graph|5%|-|
 |Mesh Illustrations|5%|-|
