@@ -14,7 +14,7 @@
 * ULO2: Program 2D and 3D graphical applications using OpenGL embedded in a programming language (such as OpenGL in Java).
 
 ## Task Description
-Your task is to implement a 2D scene with a lunar or planetary terrain (the planet Loonar ;) and a background starfield (Figure 1). A Lander floats over the scene, controlled by the keyboard.
+Your task is to implement a 2D scene with a lunar or planetary terrain (the planet Loonar ;)) and a background starfield (Figure 1). A Lander floats over the scene, controlled by the keyboard.
 
 <img alt = "Image of the completed scene" src = "ExampleImages/wholeproject.png" width="50%"> 
 
@@ -102,7 +102,7 @@ If you fire the retro-rockets to the left or right the lander should rotate in t
 <img alt = "Image of a basic lander" src = "ExampleImages/dynamic.png" width="50%">
 
 ### Lander – Exhaust Animation (4%)
-Add animation for the retro-rockets. When you depress the 'W', 'A', or 'D' keys, a single rocket flame should fire out below the lander. If the rocket is moving hortizaontall ('A' or 'D' keys), the flame should extend in the opposite direction of movement. If there is a vertical component to the movement ('W' key) the flame should be longer than in the *purely* horizontal case. Note that if the movement is both veritcal and horizontal the flame should be longer than purely horizontal movement.
+Add animation for the retro-rockets. When you depress the 'W', 'A', or 'D' keys, a single rocket flame should fire out below the lander. If the rocket is moving horizontally ('A' or 'D' keys), the flame should extend in the opposite direction of movement. If there is a vertical component to the movement ('W' key) the flame should be longer than in the *purely* horizontal case. Note that if the movement is both veritcal and horizontal the flame should be longer than purely horizontal movement. This is demonstrated in the below animated png ("rockets.png")
 
 <img alt = "Rockets from the bottom with angled thrust." src = "ExampleImages/rockets.png" width="50%">
 
@@ -118,7 +118,7 @@ An 800x800 window should show a 40x40 area of world space. Making the window’s
 <img alt = "A narrow view of the world, zoomed in." src = "ExampleImages/portrait.png" width="14%">
 
 ## Local Camera (8%)
-Add a second camera view that aligns with the attitude of the lander. In this view, the lander should always look vertically aligned, but the world will rotate around the lander.
+Add a second camera view that aligns with the orientation of the lander. In this view, the lander should always look vertically aligned, but the world will rotate around the lander.
 
 Swiching between the two cameras should be performed by hitting the '1' key for the world camera, and the '2' key for the local camera.
 
@@ -139,7 +139,7 @@ Implement both the Loonar terrain and the starfield using instancing.
 ### Boundary control (4%)
 Augment your program to ensure that the lander always remains on screen.
 
-Vertical movement should be restricted to the limits of the world. Horizontal movement off either side of the world should "wrap-around" so that the lander appears at the other side of the world (this will provide for the ablity for the lander to orbit the world).
+Vertical movement should be restricted to the limits of the world. If the camera view is reaching the edge of Loonar's surface, the surface should repeat so as to appear infinte/the lander is "orbitting" it.
 
 There are a few different ways you can approach this. Not all are obvious.
 
