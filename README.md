@@ -180,17 +180,17 @@ Each component of your documentation will be marked against the corresponding cr
 
 |Component|Grade|Description|
 |-|-|-|
-|Scene Graph (4%)|HD (100)|Scene graph is clear, easy to read and makes appropriate use of colouring and arrows to convey information. Scene graph precisely represents code.|
+|Scene Graph (5%)|HD (100)|Scene graph is clear, easy to read and makes appropriate use of colouring and arrows to convey information. Scene graph precisely represents code.|
 ||D (80)|Scene graph is clear and easy to read. Scene graph precisely represents code.|
 ||CR (70)|Scene graph may contain minor errors in clarity and legibility, and may miss some nuance of implementation in code.|
 ||P (60)|Scene graph may miss some nuance of implementation in code. Errors in clarity and legibility, but still understandable.|
 ||F (0-40)|Scene graph is difficult to visually parse or does not match code.|
-|Mesh Illustrations (4%)|HD (100)|Illustrations are neat, clear and well annotated. No discrepancies between illustrations and code.|
+|Mesh Illustrations (10%)|HD (100)|Illustrations are neat, clear and well annotated. No discrepancies between illustrations and code.|
 ||D (80)|Illustrations are neat and clear. No discrepancies between illustrations and code.|
 ||CR (70)|Minor sloppiness or missing detail. Minor discrepencies between documentation and code.|
 ||P (60)|Significant sloppiness or missing detail. Values in illustrations show understanding of task, but may not reflect code.|
 ||F (0-40)|Illustrations are unclear and badly drawn. Does not make use of graph paper. Illustrations are just screenshots from project or otherwise do not demonstrate an understanding of the purpose of documentation.|
-| World Camera Calculations (8%)|HD (100)| Different calculations are clearly distinguishable in diagram. Values are accurate and representative of code. Diagram is neat, clear and well annotated.|
+| World Camera Calculations (5%)|HD (100)| Different calculations are clearly distinguishable in diagram. Values are accurate and representative of code. Diagram is neat, clear and well annotated.|
 ||D (80)|Minor sloppiness or missing detail. No discrepancies between documentation and code.|
 ||CR (70)|Minor sloppiness or missing detail. Values in diagram may be internally accurate, but does not match code.|
 ||P (60)|Significant sloppiness and missing detail. Values in diagram show understanding of the different coordinates.|
