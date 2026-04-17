@@ -24,10 +24,12 @@ public class Assignment1 implements IWindowListener {
 	public static Assignment1 instance;
 	private InputManager input;
 	private Window window;	
-	private int screenWidth = 1000;
-	private int screenHeight = 1000;
+	private int screenWidth = 800;
+	private int screenHeight = 800;
 	private Scene scene;
 	private Matrix4f mvpMatrix = new Matrix4f();
+	private static final float WORLD_HEIGHT = 40.0f;
+	private static final float LEGACY_SCENE_SCALE = 20.0f;
 
 	public Assignment1() throws OpenGLException {
 		instance = this;
@@ -42,26 +44,42 @@ public class Assignment1 implements IWindowListener {
 		new ShaderLibrary(DIRECTORY);
 		scene = new Scene();
 		input = new InputManager(window);
-		glClearColor(0.0f, 0.f, 0.1f, 1.0f); // INKY MIDNIGHT BLUE	
+		glClearColor(0.0f, 0.f, 0.1f, 1.0f); 	
 	}
 
 	public void update() {
-		if (input.isKeyDown(GLFW_KEY_1)) {
-			// your reaction to the GLFW_KEY_1 key here
-		}
-		if (input.isKeyDown(GLFW_KEY_2)) {
-			// your reaction to the GLFW_KEY_2 key here
-		}
-		
-		input.clear();
+	    boolean up = input.isKeyDown(GLFW_KEY_W);
+	    boolean left = input.isKeyDown(GLFW_KEY_A);
+	    boolean right = input.isKeyDown(GLFW_KEY_D);
+
+	    if (input.isKeyDown(GLFW_KEY_1)) {
+	        scene.setLocalCamera(false);
+	    }
+	    if (input.isKeyDown(GLFW_KEY_2)) {
+	        scene.setLocalCamera(true);
+	    }
+
+	    scene.update(up, left, right);
+
+	    input.clear();
 	}
 
 	@Override
 	public void draw() {
-		glViewport(0, 0, screenWidth, screenHeight);
-		glClear(GL_COLOR_BUFFER_BIT);
+	    update();
 
-		mvpMatrix.identity();
+	    glViewport(0, 0, screenWidth, screenHeight);
+	    glClear(GL_COLOR_BUFFER_BIT);
+
+	    float aspect = (float) screenWidth / (float) screenHeight;
+
+	    float worldWidth = WORLD_HEIGHT * aspect;
+
+	    mvpMatrix.identity();
+	    mvpMatrix.scale(2.0f / worldWidth, 2.0f / WORLD_HEIGHT, 1.0f);
+	    mvpMatrix.scale(LEGACY_SCENE_SCALE, LEGACY_SCENE_SCALE, 1.0f);
+
+	    scene.draw(mvpMatrix);
 	}
 	
 	@Override
